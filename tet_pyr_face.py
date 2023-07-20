@@ -13,7 +13,7 @@ import numpy as np
 
 # small values generate a more refined mesh
 lc = 0.5
-# set to False to disable pyramid generation at bottom face
+# set to False to disable pyramid generation at bottom and top faces
 make_pyr = True
 
 class EntityMap:
@@ -87,13 +87,11 @@ for z in range(nlevels - 1):
 
 gmsh.model.geo.synchronize()
 
-
 # create the physical volume
 gmsh.model.add_physical_group(3, [vm[f"{z}"] for z in range(nlevels-1)], 1)
 # create the physical surfaces
 # sides
 surface_index = EntityMap(100)
-
 for z in range(nlevels-1):
     gmsh.model.add_physical_group(2, [sm[f"{z}S"],], surface_index[f"{z}S"])
     gmsh.model.add_physical_group(2, [sm[f"{z}N"],], surface_index[f"{z}N"])
