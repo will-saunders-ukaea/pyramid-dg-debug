@@ -1,3 +1,12 @@
+"""
+Creates a cube mesh [-1, 1]^3. Overly complicated as it will create multiple
+stacked layers in z to enable different element types in each layer. Here we
+only have one layer.
+
+Faces can be set to quads with make_pyr=True which will create quads on the
+bottom and top faces.
+"""
+
 import gmsh
 import sys
 import numpy as np
@@ -99,7 +108,7 @@ gmsh.model.add_physical_group(2, (sm[f"{nlevels-1}P"],), surface_index[f"{nlevel
 gmsh.model.geo.synchronize()
 
 if make_pyr:
-    horizontal_planes_to_be_quads = [0,]
+    horizontal_planes_to_be_quads = [0, 1]
     for z in horizontal_planes_to_be_quads:
         # make quads
         gmsh.model.mesh.setRecombine(2, sm[f"{z}P"])
