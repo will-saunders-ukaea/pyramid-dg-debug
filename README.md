@@ -1,15 +1,11 @@
-##
+## Running
 
+The following fails (sequential is fine),
+```
+mpirun -n 8 ./Foo conditions.xml tet_pyr.xml
+```
 
-
-
-
-
-
-
-
-
-
+with example backtrace in `backtrace.txt`.
 
 
 ## Mesh Re-creation
