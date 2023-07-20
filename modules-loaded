@@ -1,0 +1,4 @@
+Currently Loaded Modulefiles:
+ 1) arpack-ng-3.8.0-gcc-11.2.0-asz3s3b   4) hipsycl-0.9.4-gcc-11.2.0-xm37fzw       7) nektar-5.3.0-2e0fb8-gcc-11.2.0-nurqixe  10) NESO-hipsycl-build-0.9.4
+ 2) boost-1.80.0-gcc-11.2.0-kvs5bid      5) fftw-3.3.10-gcc-11.2.0-lfxsi4w         8) scotch-6.0.4-gcc-11.2.0-miae2nn
+ 3) tinyxml-2.6.2-gcc-11.2.0-sfrz2zb     6) googletest-1.10.0-gcc-11.2.0-icv45al   9) hdf5-1.12.2-gcc-11.2.0-6fgdd5g

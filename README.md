@@ -7,6 +7,10 @@ mpirun -n 8 ./Foo conditions.xml tet_pyr.xml
 
 with example backtrace in `backtrace.txt`.
 
+# Environment
+
+Nektar version: 5.3.0, `2e0fb86da236e7e5a3590fcf5e0f608bd8490945`.
+See modules-loaded for dependencies.
 
 ## Mesh Re-creation
 
